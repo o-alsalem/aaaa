@@ -17,9 +17,6 @@ export const BlogPostComponent = async ({ postsPerPage }: BlogPostBlock) => {
       {posts.map((post) => (
         <div key={post.id} className="blog-post">
           <h2 className="text-blue-600">{post.title}</h2>
-          {/* {showFeaturedImagesInList && post.featuredImage && (
-            <img src={post.featuredImage.url} alt={post.title} />
-          )} */}
           <div className="content">
             <RichText content={post.content} />
           </div>
