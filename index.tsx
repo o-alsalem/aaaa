@@ -1,43 +1,39 @@
-import { cn } from '@/utilities/cn'
-import React from 'react'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardFooter,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 
-import { serializeLexical } from './serialize'
+import Image from "next/image";
 
-type Props = {
-  className?: string
-  content: Record<string, any>
-  enableGutter?: boolean
-  enableProse?: boolean
-}
-
-const RichText: React.FC<Props> = ({
-  className,
-  content,
-  enableGutter = true,
-  enableProse = true,
-}) => {
-  if (!content) {
-    return null
-  }
-
+export default function WhatWeDo() {
   return (
-    <div
-      className={cn(
-        {
-          'container ': enableGutter,
-          'max-w-none': !enableGutter,
-          'mx-auto prose dark:prose-invert ': enableProse,
-        },
-        className,
-      )}
-    >
-      {content &&
-        !Array.isArray(content) &&
-        typeof content === 'object' &&
-        'root' in content &&
-        serializeLexical({ nodes: content?.root?.children })}
-    </div>
-  )
-}
+    <div>
+      <Card className="bg-white border-none shadow-none grid grid-cols-2">
+        <div>
+          <Image
+            src="/section_1.webp"
+            alt="Hero Image"
+            width={1000}
+            height={1000}
+            className="h-[400px] object-contain"
+          />
+        </div>
 
-export default RichText
+        <div>
+          <CardHeader className="">
+            <CardTitle className="">Träna på gamla tentor, effektivt</CardTitle>
+          </CardHeader>
+          <CardContent className="min-w-[400px]">
+            <li>d</li>
+            <li>d</li>
+            <li>d</li>
+          </CardContent>
+        </div>
+      </Card>
+    </div>
+  );
+}
