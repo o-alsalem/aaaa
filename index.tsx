@@ -26,16 +26,6 @@ export default function WhatWeDo() {
       </Card>
 
       <Card className="bg-white border-none shadow-none grid grid-cols-2 mt-16">
-        <div>
-          <Image
-            src="/section_1.webp"
-            alt="Hero Image"
-            width={1000}
-            height={1000}
-            className="h-[400px] object-contain"
-          />
-        </div>
-
         <div className="bg-[yellow]">
           <CardHeader className="">
             <CardTitle className="font-black">
@@ -72,6 +62,15 @@ export default function WhatWeDo() {
               dddddddddddddddddddddddddddd. dddddd dddddddddddd
             </li>
           </CardContent>
+        </div>
+        <div>
+          <Image
+            src="/section_1.webp"
+            alt="Hero Image"
+            width={1000}
+            height={1000}
+            className="h-[400px] object-contain"
+          />
         </div>
       </Card>
     </div>
